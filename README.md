@@ -13,7 +13,7 @@ Looking ahead, we are expanding MoMoFi to include a robust **PostgreSQL backend 
 ---
 
 ## Technical Stack & Key Integrations
-
+[![MomoFi](https://github.com/KaePee/momofi/blob/bd60cab466474b284c5f3c98cc9a0575b9aa0c7c/frontend/momofi-screenshot.png)](https://youtu.be/eMK0f1i8Qk8)
 MoMoFi leverages cutting-edge infrastructure to ensure secure, verifiable, and frictionless cross-border settlements:
 
 ### 1. Chainlink CRE & Confidential HTTP
@@ -74,3 +74,4 @@ make frontend
 ## Known Issues
 - `FxRate` for USDC/GHS(Mainnet and Testnet) is optimally available on Celo so chainlink PriceFeeds would have been a better candidate to fetch FxRate for USDC/GHS, but our CRE setup focuses on Base Sepolia because workflow does not have forwarder and chain selector support for Celo network.
 - We default to an external FX API to fetch the USDC/GHS exchange rate dynamically during the CRE workflow execution.
+- Contract is not rigorously tested and therefore not suitable for production for now.
