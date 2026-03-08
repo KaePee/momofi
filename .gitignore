@@ -10,3 +10,5 @@ contracts/lib/
 contracts/cache/
 contracts/out/
 contracts/broadcast/
+
+**/.cre_build_tmp.js
