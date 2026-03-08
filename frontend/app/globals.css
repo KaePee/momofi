@@ -1,0 +1,237 @@
+:root {
+  --ink: #101820;
+  --paper: #f8f7f4;
+  --cobalt: #0b5fff;
+  --mint: #00cf9f;
+  --sun: #ffb84f;
+  --danger: #c33b4a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  color: var(--ink);
+  font-family: var(--font-space), "Avenir Next", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(11, 95, 255, 0.25), transparent 42%),
+    radial-gradient(circle at 10% 20%, rgba(0, 207, 159, 0.22), transparent 40%),
+    linear-gradient(145deg, #f8f7f4 0%, #eef2f8 55%, #f5fbf7 100%);
+}
+
+.shell {
+  position: relative;
+  padding: 2.2rem 1.1rem 4rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.heroBackdrop {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, rgba(16, 24, 32, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(16, 24, 32, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.24;
+  mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+}
+
+.hero {
+  position: relative;
+  padding: 1rem 0 1.8rem;
+}
+
+.hero .kicker {
+  margin: 0;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  color: var(--cobalt);
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 0.4rem 0;
+  font-family: var(--font-sora), "Futura", sans-serif;
+  font-size: clamp(1.85rem, 5.6vw, 3.35rem);
+  max-width: 780px;
+  line-height: 1.05;
+}
+
+.hero p {
+  margin: 0;
+  max-width: 660px;
+  font-size: 1.02rem;
+  opacity: 0.88;
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.panel {
+  border-radius: 22px;
+  border: 1px solid rgba(16, 24, 32, 0.1);
+  background: rgba(248, 247, 244, 0.82);
+  backdrop-filter: blur(6px);
+  box-shadow:
+    0 14px 40px rgba(16, 24, 32, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.55) inset;
+}
+
+.panelPrimary {
+  padding: 1.2rem;
+}
+
+.walletPanel {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.15rem;
+}
+
+.label {
+  margin: 0;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.72;
+}
+
+.title {
+  margin: 0.2rem 0 0;
+  font-family: var(--font-sora), sans-serif;
+}
+
+.panelHeader h2 {
+  margin: 0.2rem 0;
+  font-family: var(--font-sora), sans-serif;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--cobalt);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.fieldGroup {
+  margin-top: 0.85rem;
+}
+
+.fieldGroup label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(16, 24, 32, 0.16);
+  padding: 0.75rem 0.85rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+input:focus {
+  outline: 2px solid rgba(11, 95, 255, 0.3);
+  border-color: var(--cobalt);
+}
+
+.actionRow {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  background: linear-gradient(95deg, var(--cobalt), #3a86ff);
+  color: white;
+}
+
+.btn.secondary {
+  background: linear-gradient(95deg, #2f3743, #4f5969);
+}
+
+.btn.tertiary {
+  background: rgba(16, 24, 32, 0.08);
+  color: var(--ink);
+  padding: 0.4rem 0.75rem;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.quoteBox,
+.statusBox {
+  margin-top: 0.95rem;
+  border-radius: 14px;
+  padding: 0.8rem;
+  background: linear-gradient(160deg, rgba(0, 207, 159, 0.14), rgba(255, 255, 255, 0.78));
+  border: 1px solid rgba(16, 24, 32, 0.08);
+}
+
+.quoteBox h3 {
+  margin: 0.25rem 0;
+  font-family: var(--font-sora), sans-serif;
+  font-size: 1.7rem;
+}
+
+.statusTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.statusBox p,
+.quoteBox p {
+  margin: 0.35rem 0;
+}
+
+.muted {
+  opacity: 0.72;
+}
+
+.feedback {
+  margin-top: 0.8rem;
+  font-weight: 600;
+}
+
+@media (min-width: 900px) {
+  .shell {
+    padding-top: 3rem;
+  }
+
+  .grid {
+    grid-template-columns: 0.95fr 1.4fr;
+  }
+
+  .walletPanel {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}

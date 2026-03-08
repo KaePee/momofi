@@ -1,0 +1,17 @@
+{
+  "evm": {
+    "chainSelectorName": "ethereum-testnet-sepolia-base-1",
+    "logicContractAddress": "0x6A5d721AC01A860F9Ddb8AAf1AC31DD5e0bC09d8",
+    "proxyContractAddress": "0x766efF342dBF21400b22BA7F4c439CAC2C5A7E8d"
+  },
+  "fxApiUrl": "https://open.er-api.com/v6/latest/USD",
+  "intentResolverUrl": "http://localhost:3000/api/intents/resolve",
+  "mtn": {
+    "validateUrl": "https://sandbox.momodeveloper.mtn.com/v1/momo/validate",
+    "payoutUrl": "https://sandbox.momodeveloper.mtn.com/disbursement/v1_0/transfer",
+    "targetEnvironment": "sandbox",
+    "basicAuthSecretId": "MTN_BASIC_AUTH",
+    "subscriptionKeySecretId": "MTN_SUBSCRIPTION_KEY"
+  },
+  "simulateMtn": true
+}
