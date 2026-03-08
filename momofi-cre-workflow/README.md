@@ -11,7 +11,7 @@ Event-driven Chainlink CRE workflow for `TransferRequested` events from `MoMoSet
 
 1. Fetch USD/GHS rate from `fxApiUrl`.
 2. Resolve recipient phone from `intentResolverUrl` using `transferId` + `phoneHash`.
-3. Validate and disburse via MTN APIs (or `simulateMtn=true` for hackathon dry-runs).
+3. Validate and disburse via MTN APIs (or `simulateMtn=true` for dry-runs).
 4. On success: call `confirmSettlement(id, ghsAmount, fxRate)`.
 5. On failure: call `refundTransfer(id, reason)`.
 
@@ -37,12 +37,11 @@ Set in `config.staging.json` / `config.production.json`:
 
 From project root:
 
-```bash
-cre workflow simulate ./cre-workflow --target=staging-settings
-```
-
-Deploy:
+Simulate
 
 ```bash
-cre workflow deploy ./cre-workflow --target=production-settings
+make cre-workflow
 ```
+
+Deploy
+> Coming soon 
