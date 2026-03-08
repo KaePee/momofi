@@ -25,9 +25,9 @@ Convert sender USDC to recipient MTN Mobile Money (GHS) with verifiable onchain 
 ## Data Handling
 
 - Onchain: `bytes32 phoneHash` only.
-- Offchain: raw MSISDN for MTN API operations (recommended via Confidential HTTP).
+- Offchain: raw MSISDN for MTN API operations obfuscated by Confidential HTTP.
 
 ## Rate Sources
 
-- Primary (hackathon option): CRE HTTP request to FX API.
-- Optional fallback: Chainlink Data Feed comparison for slippage checks.
+- CRE HTTP request to FX API.
+- Optional fallback: Chainlink Data Feed comparison for slippage checks. (Later improvements)
